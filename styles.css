@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  font-family: Helvetica, sans-serif;
+}
+
+/* MOBILE FIRST */
+
+header {
+  /* width: 355px; */
+  height: 111px;
+  padding-top: 0px;
+  padding-bottom: 33px;
+  padding-left: 50px;
+}
+
+h1 {
+  margin-top: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.image-box {
+  margin: 30px;
+}
+
+.caption {
+  /* width: 350px; */
+  text-align: center;
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+#landscape {
+  width: 265px;
+  align-content: center;
+}
+
+#athens {
+  width: 175px;
+}
+#untitled-1970 {
+  width: 184px;
+}
+#untitled-1950 {
+  width: 205px;
+}
+#baco {
+  width: 282px;
+}
+#natural {
+  width: 159px;
+}
+#anabasis {
+  width: 150px;
+}
+#catulo {
+  width: 305px;
+}
+
+/* BREAKING POINT PARA IPAD PRO 10, 5 */
+
+@media (min-width: 834px) {
+  /* FLEXBOX CONTAINER:  */
+
+  .paintings {
+    /* We first create a flex layout context */
+    display: flex;
+    /* Then we define the flow direction 
+     and if we allow the items to wrap 
+
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+    flex-flow: row wrap;
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+  }
+
+
+  img {
+    display: block;
+    margin: auto;
+  }
+
+  #landscape {
+    width: 403px;
+    align-content: center;
+  }
+
+  #athens {
+    width: 187px;
+  }
+
+  #untitled-1970 {
+    width: 258px;
+  }
+
+  #untitled-1950 {
+    width: 226px;
+  }
+  #baco {
+    width: 380px;
+  }
+  #natural {
+    width: 149px;
+    margin-top: 15px;
+  }
+  #anabasis {
+    width: 132px;
+  }
+
+  #catulo {
+    width: 498px;
+  }
+  #catulo-box {
+    /* para centrar una imagen: */
+    display: block;
+    margin: auto;
+  }
+
+  #natural-box {
+    float: right;
+    margin: 1em 0 1em 1em;
+  }
+}
+
+/* BREAKPOINT WEB  */
+
+@media (min-width: 1366px) {
+  /* flex container: paintings */
+
+  .paintings {
+    /* We first create a flex layout context */
+    /* display: flex; */
+    /* Then we define the flow direction 
+     and if we allow the items to wrap 
+
+  flex-flow: row wrap;
+
+   /* Remember this is the same as:
+   flex-direction: row;
+   flex-wrap: wrap; */
+
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+    /* añadimos el margen */
+  }
+
+  #landscape {
+    width: 646px;
+    align-content: center;
+  }
+
+  #athens {
+    width: 368px;
+  }
+
+  #untitled-1970 {
+    width: 409px;
+  }
+
+  #untitled-1950 {
+    width: 442px;
+  }
+  #baco {
+    width: 530px;
+  }
+  #natural {
+    width: 349px;
+    margin-top: 15px;
+  }
+  #anabasis {
+    width: 332px;
+  }
+
+  #catulo {
+    width: 898px;
+  }
+}
