@@ -77,6 +77,22 @@ h1{
 #first-painting {
   height: 300px;
 }
+.bacus-painting {
+  margin-top: 35px;
+}
+
+.catullus-painting {
+  margin-top: 100px;
+}
+
+.untitled-1970{
+  margin-top: 50px;
+
+}
+
+.untitled-1951 {
+  margin-top: 40px;
+}
 /* .flippedCard {
   background-color: dodgerblue;
   color: white;
@@ -84,6 +100,10 @@ h1{
   width: 100%;
 }
   */
+
+  .first-image {
+    margin-top: 70px;
+  }
 
   p {
     text-transform: none;
