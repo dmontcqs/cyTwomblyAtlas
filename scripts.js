@@ -1,28 +1,11 @@
 
-// const flipImage = () => {
+// const imageBox = document.querySelectorAll('#image-box') 
 
-// var flipBox = document.querySelector('.flip-box');
-// flipBox.addEventListener( 'click', function() {
-//   flipBox.classList.toggle('is-flipped');
-// });
-// }
+// imageBox.addEventListener("click", flipCard); 
 
 
-
-// var flipBox = document.querySelector('.flip-box');
-// flipBox.addEventListener( 'click', function() {
-//   flipBox.classList.toggle('is-flipped');
-// });
-
-// var flipBox = document.getElementsByClassName('flip-box');
-// for(var i = 0; i < flipBox.length; i++){
-//  addEventListener('click', function () {
-//      alert('Hi!')
-
-//     })};
-
-    document.querySelectorAll('.flip-box').forEach(flipBox => {
-        flipBox.addEventListener('click', event => {
-            flipBox.classList.toggle('is-flipped');
-        })
-      })
+// document.querySelectorAll('#image-box').forEach(flipBox => {
+//     flipBox.addEventListener('click', event => {
+//         flipBox.classList.toggle('flippedCard');
+//         })
+//   })

@@ -2,192 +2,108 @@
 
 * {
   box-sizing: border-box;
-  margin: 0px;
+ 
   padding: 0px;
 }
 
 html {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Urbanist', sans-serif;
 }
 
-/* MOBILE FIRST */
-
-header {
-  /* width: 355px; */
-  height: 111px;
-  padding-top: 0px;
-  padding-bottom: 33px;
-  padding-left: 50px;
+body{
+  background-color: #FFFFFF;
 }
 
-h1 {
-  margin-top: 20px;
+h1{
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
 }
 
-.image-box {
-  margin: 30px;
-}
-
-.caption {
-  /* width: 350px; */
-  text-align: center;
-  margin: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-img {
-  display: block;
-  margin: auto;
-}
-
-#landscape {
-  width: 265px;
-  align-content: center;
-}
-
-#athens {
-  width: 175px;
-}
-#untitled-1970 {
-  width: 184px;
-}
-#untitled-1950 {
-  width: 205px;
-}
-#baco {
-  width: 282px;
-}
-#natural {
-  width: 159px;
-}
-#anabasis {
-  width: 150px;
-}
-#catulo {
-  width: 305px;
-}
-
-/* BREAKING POINT PARA IPAD PRO 10, 5 */
-
-@media (min-width: 834px) {
-  /* FLEXBOX CONTAINER:  */
-
-  .paintings {
-    /* We first create a flex layout context */
-    display: flex;
-    /* Then we define the flow direction 
-     and if we allow the items to wrap 
-
-   * Remember this is the same as:
-   * flex-direction: row;
-   * flex-wrap: wrap;
-   */
-    flex-flow: row wrap;
-    /* Then we define how is distributed the remaining space */
-    justify-content: space-around;
-  }
-
-
-  img {
-    display: block;
-    margin: auto;
-  }
-
-  #landscape {
-    width: 403px;
-    align-content: center;
-  }
-
-  #athens {
-    width: 187px;
-  }
-
-  #untitled-1970 {
-    width: 258px;
-  }
-
-  #untitled-1950 {
-    width: 226px;
-  }
-  #baco {
-    width: 380px;
-  }
-  #natural {
-    width: 149px;
-    margin-top: 15px;
-  }
-  #anabasis {
-    width: 132px;
-  }
-
-  #catulo {
-    width: 498px;
-  }
-  #catulo-box {
-    /* para centrar una imagen: */
-    display: block;
-    margin: auto;
-  }
-
-  #natural-box {
-    float: right;
-    margin: 1em 0 1em 1em;
-  }
-}
-
-/* BREAKPOINT WEB  */
-
-@media (min-width: 1366px) {
-  /* flex container: paintings */
-
-  .paintings {
-    /* We first create a flex layout context */
-    /* display: flex; */
-    /* Then we define the flow direction 
-     and if we allow the items to wrap 
-
+.paintings {
+  display: flex;
+  justify-content: space-around;
   flex-flow: row wrap;
+  
+}
 
-   /* Remember this is the same as:
-   flex-direction: row;
-   flex-wrap: wrap; */
 
-    /* Then we define how is distributed the remaining space */
-    justify-content: space-around;
-    /* añadimos el margen */
+.image-box{
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  margin: 40px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.inner-painting{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.image-box:hover .inner-painting {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.front-painting, .back-painting {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.front-painting {
+  
+  color: black;
+}
+
+/* Style the back side */
+.back-painting {
+  background-color:#AAAAAA;
+  width: 100%;
+  color: white;
+  transform: rotateY(180deg);
+  height: 350px;
+  overflow: scroll;
+  
+}
+
+#first-painting {
+  height: 300px;
+}
+/* .flippedCard {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+  width: 100%;
+}
+  */
+
+  p {
+    text-transform: none;
+    text-align: left;
+    font-size:16px;
+    margin: 10px;
   }
 
-  #landscape {
-    width: 646px;
-    align-content: center;
-  }
-
-  #athens {
-    width: 368px;
-  }
-
-  #untitled-1970 {
-    width: 409px;
-  }
-
-  #untitled-1950 {
-    width: 442px;
-  }
-  #baco {
-    width: 530px;
-  }
-  #natural {
-    width: 349px;
-    margin-top: 15px;
-  }
-  #anabasis {
-    width: 332px;
-  }
-
-  #catulo {
-    width: 898px;
-  }
+footer{
+  margin-top: 300px;
+  font-family: 'Rajdhani', sans-serif;
+  background: #ebedee;
+  position: relative;
+  display: flex;
+  bottom: 0px;
+  padding: 15px;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: space-between; 
+  color:  #0d253f;
+  /* background: linear-gradient(to top, #0d253f, transparent); */
 }
