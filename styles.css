@@ -22,13 +22,13 @@ body {
 }
 
 body.dark{
-background: #111111;
+background: #111111;;
 color: #fff;
 }
 
 footer.dark{
   
-background: #111111;
+background: #111111;;
 color: #fff;
 
 }
@@ -44,7 +44,7 @@ ul{
   position: absolute;
   top: 20px; 
   right: 20px; 
-  margin: 0;
+  margin-left: 50px;
   padding: 0;
   width: 100px; 
   height: 30px;
@@ -77,13 +77,13 @@ ul li span {
   width: 100%;
   height: 30px;
   line-height: 30px;
-  color: #111111;
+  color: #111111;;
   background: #fff;
 }
 
 /* qué significa esta cadenita ???? */
 ul li span:nth-child(1){
-  background: #111111;
+  background: #111111;;
   color: #fff;
 }
 
