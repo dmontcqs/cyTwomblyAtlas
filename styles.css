@@ -13,6 +13,7 @@ html {
 
 /* NIGHT MODE */
 /* buscar qué es section en código del video = my body  */
+
 body {
   position: absolute;
   top: 0;
@@ -26,8 +27,8 @@ background: #111111;;
 color: #fff;
 }
 
+
 footer.dark{
-  
 background: #111111;;
 color: #fff;
 
@@ -41,10 +42,7 @@ figcaption.dark {
 }
 
 ul{
-  position: absolute;
-  top: 20px; 
-  right: 20px; 
-  margin-left: 50px;
+  position:relative;
   padding: 0;
   width: 100px; 
   height: 30px;
